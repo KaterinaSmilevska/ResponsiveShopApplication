@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQuery.css">
+    <link rel="stylesheet" href="objects.css">
+    <link rel="stylesheet" href="shopping.css">
+    <link rel="stylesheet" href="artist.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="myscript.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="jsviews.js"></script>
+    <script src="albums.js"></script>
+    <script src="shopping.js"></script>
+
+    <script id="productTemplate" type="text/x-jsrender">
+      <table>
+        <tbody>
+           <tr id="head">
+            <th></th>
+            <th class="alName">Name</th>
+            <th class="quantity">Quantity</th>
+            <th class="price
+            ">Price</th>
+            <th></th>
+           </tr>
+            {{for items}}
+                <tr class="productDetails" id="delete_{{:albumCode}}">
+                    <td>
+                        <img data-link="src{:cover}, alt{:albumName}">
+                    </td>
+                    <td class="alName">{^{:albumName}}</td>
+                    <td class="numericColumn" id="num">
+                        <form id="form">
+                             <input id="quantity" type="number" value="1" min="1" max="5" name="number">
+                        </form>
+                    </td>
+                    <td class="numericColumn">${^{:price}}</td>
+                    <td class="deleteItem" onclick="deleteFromShoppingList('{{:albumCode}}'); location.reload()"><i class="fa fa-trash"></i></td>
+                </tr>
+            {{/for}}
+        </tbody>
+      </table>
+    </script>
+
+</head>
+<body onload="showShoppingList(); noItems(); total();">
+    <div class="header">
+        <div class="left">
+            <img src="images/logo2.png" alt="logo">
+        </div>
+        <div class="nav-toggle" onclick="hamburgerMenu()">
+            <input type="checkbox" id="toggle"><i class="fa fa-bars"></i>
+        </div>
+        <div class="nav-toggle" onclick="hamburgerMenu()">
+            <input type="checkbox" id="close"><i class="fa fa-times"></i>
+        </div>
+        <div class="right active" id="menu">
+            <ul>
+                <li><a href="home.html"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="artist.html">Artists</a></li>
+                <li class="albums"><a href="genres.html">Albums</a></li>
+                <li><a href="contact.html"><i class="fa fa-phone"></i>Contact</a></li>
+                <li class="login"><a href="login.html">Login</a></li>
+                <li class="current"><a href="shopping.html"><i class="fa fa-shopping-cart"></i></a></li>
+                <li class="search">
+                    <form>
+                        <label><i class="fa fa-search"></i>
+                            <input id="input" name="search" autocomplete="off" placeholder="Search...">
+                        </label>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="shoppingCart">
+        <div id="sc">Shopping cart</div>
+        <div id="productInfo">
+            <div id="empty" style="display: none;">
+                <div>There are no items in your cart.</div>
+            </div>
+            <div id="productContainer">
+
+            </div>
+            <div id="deleteAll" onclick="clearShoppingCart()">Delete all</div>
+            <div id="cardDetails">
+                <div id="cardTitle">Card details</div>
+                <div id="cardType">Card type:</div>
+                <div class="cards">
+                    <i class="fa fa-cc-amex"></i>
+                    <i class="fa fa-cc-mastercard"></i>
+                    <i class="fa fa-cc-paypal"></i>
+                    <i class="fa fa-cc-visa"></i>
+                </div>
+                <form>
+                    <label>Name
+                        <input class="cardInfo" type="text" name="name" autocomplete="off">
+                    </label>
+                    <label>Card number
+                        <input class="cardInfo" type="text" name="number" autocomplete="off">
+                    </label>
+                    <label>Expiration date
+                        <input class="cardInfo" type="date" name="date" autocomplete="off">
+                    </label>
+                </form>
+                <div id="shipping">
+                    <div>Shipping</div>
+                    <div>$30.00</div>
+                </div>
+                <div class="total">
+                    <div>Total</div>
+                    <div id="total"></div>
+                </div>
+
+                <div id="checkout">
+                    <div>
+                        Checkout<i class="fa fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="continue">
+            <div onclick="window.location='genres.html'">
+                <i class="fa fa-arrow-left"></i>
+                Continue shopping
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div id="mail">
+            <div class="emailAddress">
+                <p>Enter your email address to search for your favourite albums.</p>
+                <label>
+                    <input type="email" name="email" autocomplete="off" placeholder="E-mail" required="required">
+                </label>
+                <button type="submit" name="submit">SUBMIT</button>
+            </div>
+            <div id="map">
+                <iframe src="https://maps.google.com/maps?q=bitola&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div>
+
+        <div class="links">
+            <div class="link-logo"><i class="fa fa-link"></i></div>
+            <!--            <div class="explore">Explore</div>-->
+            <div class="websiteLinks">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="artist.html" target="_blank">ARTISTS</a></li>
+                    <li><a href="genres.html" target="_blank">GENRES</a></li>
+                    <li><a href="shopping.html" target="_blank">SHOPPING CART</a></li>
+                    <li><a href="contact.html" target="_blank">CONTACT</a></li>
+                    <li><a href="login.html" target="_blank">LOGIN</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social">
+            <div class="media">SOCIAL MEDIA</div>
+            <div class="sm-icons">
+                <i onclick="window.open('https://www.facebook.com/', '_blank')" class="fa fa-facebook-square"></i>
+                <i onclick="window.open('https://www.instagram.com/accounts/login/', '_blank')" class="fa fa-instagram"></i>
+                <i onclick="window.open('https://twitter.com/login?lang=en', '_blank')" class="fa fa-twitter"></i>
+                <i onclick="window.open('https://github.com/', '_blank')" class="fa fa-github"></i>
+                <i onclick="window.open('https://www.youtube.com/', '_blank')" class="fa fa-youtube-play"></i>
+            </div>
+            <div class="terms">
+                <div class="legal">LEGAL</div>
+                <div>Terms</div>
+                <div>Policy</div>
+            </div>
+        </div>
+        <div class="top">
+            <i class="fa fa-angle-up" onclick="topFunction()"></i>
+        </div>
+    </div>
+
+</body>
+</html>

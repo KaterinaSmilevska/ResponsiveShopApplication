@@ -1,0 +1,265 @@
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+#shoppingCart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: 100%;
+}
+
+#sc{
+    padding: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 1px;
+    align-self: flex-start;
+    text-align: center;
+}
+
+#productInfo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    height: 100%;
+}
+
+#productInfo div{
+    padding: 20px;
+    font-size: 20px;
+}
+
+#items{
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    padding: 0;
+    border-radius: 10px;
+}
+
+#empty div{
+    background-color: #161030;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+#productContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    margin: 0 20px;
+    height: auto;
+    padding: 0;
+}
+
+table{
+    border-spacing: 0 20px;
+    border-collapse: separate;
+}
+
+.productDetails td:first-child{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.productDetails td:last-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+table #head th{
+    padding: 15px 20px;
+}
+
+.numericColumn{
+    text-align: right;
+}
+
+.numericColumn span{
+    cursor: pointer;
+}
+
+.numericColumn input{
+    text-align: right;
+    width: 50px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    vertical-align: middle;
+}
+
+.productDetails{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.productDetails:hover{
+    box-shadow: 2px 2px 2px #cccccc;
+    transition: box-shadow 0.2s linear;
+}
+
+.productDetails td{
+    padding: 25px;
+}
+
+.productDetails td img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.alName{
+    text-align: left;
+}
+.price{
+    text-align: right;
+}
+.deleteItem{
+    cursor: pointer;
+}
+
+.fa-trash:before{
+    color: white;
+    background-color: darkred;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#deleteAll{
+    display: none;
+    margin: 20px;
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+
+#cardDetails{
+    background-color: #161030;
+    color: white;
+    border-radius: 10px;
+}
+
+#cardDetails form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+}
+
+#cardDetails form label{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 16px;
+}
+
+#cardDetails form label input{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#cardTitle{
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+#cardType{
+    font-size: 16px;
+    padding: 10px;
+}
+
+.fa-cc-mastercard:before{
+    background: linear-gradient(-120deg, #cc0000, #ff9900, #000066);
+    font-size: 50px;
+    padding: 0 10px;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-cc-mastercard:hover, .fa-cc-visa:hover, .fa-cc-paypal:hover, .fa-cc-amex:hover{
+    opacity: 0.6;
+}
+
+.fa-cc-amex:before{
+    background: linear-gradient(120deg, #85ccf2, #006cce);
+    font-size: 50px;
+    padding: 0 10px;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-cc-paypal:before{
+    background: linear-gradient(-120deg, #003087, #009cde, #012169);
+    font-size: 50px;
+    padding: 0 10px;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-cc-visa:before{
+    background: linear-gradient(120deg, #1a1f71, #f7b600);
+    font-size: 50px;
+    padding: 0 10px;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+#continue{
+    padding: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #161030;
+    align-self: flex-start;
+}
+
+#continue div{
+    cursor: pointer;
+}
+
+#shipping, .total{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#shipping div, .total div{
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#checkout{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+#checkout div{
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #161030;
+    cursor: pointer;
+}
+
+#checkout div:hover{
+    box-shadow: 2px 2px #f1f1f1;
+    transition: box-shadow 0.3s ease-out;
+}

@@ -1,0 +1,155 @@
+body{
+    background-color: white;
+}
+
+#genreContainer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    color: #cccccc;
+    cursor: pointer;
+    padding: 15px 20px;
+}
+
+#aside{
+   margin: 0;
+}
+
+.fa-guitar, .fa-headphones-alt, .fa-music, .fa-drum, .fa-record-vinyl{
+    font-size: 30px;
+    color: #cccccc;
+}
+
+.fa-th{
+    font-size: 30px;
+    color: #cccccc;
+}
+
+.activeLink{
+    background-color: #161013;
+    border-radius: 10px;
+}
+
+.genre{
+    color: #f9e1cf;
+    font-size: 30px;
+    font-family: 'Cambria', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+    height: auto;
+}
+
+.genreName{
+    letter-spacing: 1px;
+    color: #cccccc;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.icons:hover{
+    color: white;
+    text-shadow: 2px 2px 5px #cccccc;
+}
+
+.fa-angle-down:before{
+    padding-left: 10px;
+    color: white;
+}
+
+.album{
+    background-color: #f9e1cf;
+    color: #161030;
+}
+
+.album:hover{
+    box-shadow: 2px 2px 2px 2px #f9e1cf;
+    transition: box-shadow 0.3s linear;
+}
+
+#albumName{
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+#track{
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.search{
+    padding: 30px 80px;
+}
+
+#foundAlbumsContainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    color: #161030;
+}
+
+#albumsContainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px 50px;
+    color: #161030;
+}
+
+#aside{
+    max-height: 410px;
+}
+
+.searchList{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+#searchBy{
+    background-color: #161030;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 30px 0 0 20px;
+    width: 200px;
+}
+
+#albumsAndGenres{
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+#albumsAndGenres form{
+    padding: 10px;
+    font-size: 16px;
+}
+
+#albumsAndGenres form label{
+    display: block;
+    padding: 10px;
+    text-align: left;
+}
+
+#releaseDate{
+    border-top: 2px solid #f9e1cf;
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+#releaseDate form{
+    padding: 10px;
+}
+
+#releaseDate form label input{
+    text-align: center;
+}

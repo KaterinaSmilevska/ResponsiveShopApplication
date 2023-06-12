@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artists</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="objects.css">
+    <link rel="stylesheet" href="mediaQuery.css">
+    <link rel="stylesheet" href="artist.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="jsviews.js"></script>
+    <script src="myscript.js"></script>
+    <script src="albums.js"></script>
+
+    <script id="artistsTemplate" type="text/x-jsrender">
+        <div class="info" id="artistInfo_{{:code}}" onclick="window.open('showArtist.html?artistCode={{:code}}', '_blank')">
+            <img class="images" data-link="src{:picture}, alt{:name}" />
+             <div id="name">{^{:name}}</div>
+             <div id="numAlbums">{^{:numAlbums}} albums</div>
+        </div>
+    </script>
+</head>
+<body onload="loadArtists()">
+<div class="header">
+    <div class="left">
+        <img src="images/logo2.png" alt="logo">
+    </div>
+    <div class="nav-toggle" onclick="hamburgerMenu()">
+        <input type="checkbox" id="toggle"><i class="fa fa-bars"></i>
+    </div>
+    <div class="nav-toggle" onclick="hamburgerMenu()">
+        <input type="checkbox" id="close"><i class="fa fa-times"></i>
+    </div>
+    <div class="right active" id="menu">
+        <ul>
+            <li><a href="home.html"><i class="fa fa-home"></i>Home</a></li>
+            <li class="current"><a href="artist.html">Artists</a></li>
+            <li class="albums"><a href="genres.html">Albums</a></li>
+            <li><a href="contact.html"><i class="fa fa-phone"></i>Contact</a></li>
+            <li class="login"><a href="login.html">Login</a></li>
+            <li><a href="shopping.html"><i class="fa fa-shopping-cart"></i></a></li>
+            <li class="search">
+                <form>
+                    <label><i class="fa fa-search"></i>
+                        <input onkeyup="SearchByArtistName()" id="input" name="search" autocomplete="off" placeholder="Search artists...">
+                    </label>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div id="artists">
+        <div id="artistLinks">
+            <div id="linkTitle">Artists</div>
+            <ul id="links">
+                <li class="current"><a onclick="loadArtists()">A-Z</a></li>
+                <li><a onclick="loadArtistsZA()">Z-A</a></li>
+                <li><a onclick="displayLetters()">Artists starting with...</a>
+                    <ul id="start" style="display: none">
+                        <li><a onclick="showArtists('A')">A</a></li>
+                        <li><a onclick="showArtists('B')">B</a></li>
+                        <li><a onclick="showArtists('C')">C</a></li>
+                        <li><a onclick="showArtists('D')">D</a></li>
+                        <li><a onclick="showArtists('E')">E</a></li>
+                        <li><a onclick="showArtists('G')">G</a></li>
+                        <li><a onclick="showArtists('H')">H</a></li>
+                        <li><a onclick="showArtists('I')">I</a></li>
+                        <li><a onclick="showArtists('J')">J</a></li>
+                        <li><a onclick="showArtists('K')">K</a></li>
+                        <li><a onclick="showArtists('L')">L</a></li>
+                        <li><a onclick="showArtists('M')">M</a></li>
+                        <li><a onclick="showArtists('N')">N</a></li>
+                        <li><a onclick="showArtists('O')">O</a></li>
+                        <li><a onclick="showArtists('P')">P</a></li>
+                        <li><a onclick="showArtists('Q')">Q</a></li>
+                        <li><a onclick="showArtists('R')">R</a></li>
+                        <li><a onclick="showArtists('S')">S</a></li>
+                        <li><a onclick="showArtists('T')">T</a></li>
+                        <li><a onclick="showArtists('U')">U</a></li>
+                        <li><a onclick="showArtists('V')">V</a></li>
+                        <li><a onclick="showArtists('W')">W</a></li>
+                        <li><a onclick="showArtists('X')">X</a></li>
+                        <li><a onclick="showArtists('Y')">Y</a></li>
+                        <li><a onclick="showArtists('Z')">Z</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="noArtist">No artists match your search.</div>
+        <div id="artistContainer">
+
+        </div>
+    </div>
+
+<div class="footer">
+    <div id="mail">
+        <div class="emailAddress">
+            <p>Enter your email address to search for your favourite albums.</p>
+            <label>
+                <input type="email" name="email" autocomplete="off" placeholder="E-mail" required="required">
+            </label>
+            <button type="submit" name="submit">SUBMIT</button>
+        </div>
+        <div id="map">
+            <iframe src="https://maps.google.com/maps?q=bitola&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+    </div>
+
+    <div class="links">
+        <div class="link-logo"><i class="fa fa-link"></i></div>
+        <div class="websiteLinks">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="artist.html" target="_blank">ARTISTS</a></li>
+                <li><a href="genres.html" target="_blank">GENRES</a></li>
+                <li><a href="shopping.html" target="_blank">SHOPPING CART</a></li>
+                <li><a href="contact.html" target="_blank">CONTACT</a></li>
+                <li><a href="login.html" target="_blank">LOGIN</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="social">
+        <div class="media">SOCIAL MEDIA</div>
+        <div class="sm-icons">
+            <i onclick="window.open('https://www.facebook.com/', '_blank')" class="fa fa-facebook-square"></i>
+            <i onclick="window.open('https://www.instagram.com/accounts/login/', '_blank')" class="fa fa-instagram"></i>
+            <i onclick="window.open('https://twitter.com/login?lang=en', '_blank')" class="fa fa-twitter"></i>
+            <i onclick="window.open('https://github.com/', '_blank')" class="fa fa-github"></i>
+            <i onclick="window.open('https://www.youtube.com/', '_blank')" class="fa fa-youtube-play"></i>
+        </div>
+        <div class="terms">
+            <div class="legal">LEGAL</div>
+            <div>Terms</div>
+            <div>Policy</div>
+        </div>
+    </div>
+    <div class="top">
+        <i class="fa fa-angle-up" onclick="topFunction()"></i>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+#artists{
+    background-color: white;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+#artistLinks{
+    background-color: #161030;
+    color: white;
+    padding: 20px 30px;
+    letter-spacing: 1px;
+    height: 250px;
+    max-height: 950px;
+    margin-top: 50px;
+}
+
+#linkTitle{
+    text-align: center;
+    background-color: #f9e1cf;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #161030;
+}
+
+#links{
+    padding: 0 0 0 15px;
+    width: 250px;
+}
+
+#links li a{
+    cursor: pointer;
+}
+
+#links li a:hover{
+    color: #cccccc;
+}
+
+#links li.current{
+    color: #f9e1cf;
+}
+
+#links li{
+    padding: 10px;
+}
+
+#start{
+    list-style-type: none;
+    padding: 0;
+}
+
+#start li:nth-child(2n){
+    width: 200px;
+    background-color: white;
+    color: #161030;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 0 5px 10px;
+}
+#start li:nth-child(2n + 1){
+    width: 200px;
+    background-color: #cccccc;
+    color: #161030;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 0 5px 10px;
+}
+
+#start li:hover{
+    background-color: #161030;
+    color: white;
+}
+
+#start li a{
+    text-decoration: none;
+    color: #161030;
+    display: block;
+}
+#tart li:hover a{
+    color: white;
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color: #f9e1cf;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#noArtist{
+    display: none;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    letter-spacing: 1px;
+    background-color: #cccccc;
+    font-weight: bold;
+    max-height: 100px;
+    align-self: center;
+    border-radius: 5px;
+}
+
+#artistContainer, #ZAContainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    color: #161030;
+}

@@ -1,0 +1,634 @@
+@media (max-width: 1400px){
+    .header .right ul{
+        text-align: center;
+    }
+    .header .right ul li{
+        padding-top: 10px;
+        margin-right: 0;
+    }
+    .header .left img{
+        margin-left: 0;
+    }
+    .main{
+        align-items: center;
+    }
+    .nav-auto{
+        width: 600px;
+        top: 125%;
+        left: 30%;
+    }
+    #popup.show{
+        top: 90%;
+    }
+    #createAccount.display{
+        top: 80%;
+    }
+}
+
+@media (max-width: 1347px){
+    .wrapper .border{
+        width: 500px;
+    }
+}
+
+@media (max-width: 1308px) {
+    #productInfo {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+@media (max-width: 1225px) {
+    .header, .main{
+        flex-direction: column;
+    }
+    .header .right ul{
+        text-align: center;
+    }
+    .header .right ul li{
+        padding-top: 10px;
+        margin-right: 0;
+    }
+    .header .left img{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1171px) {
+    .header, .main{
+        flex-direction: column;
+    }
+    .header .right ul{
+        text-align: center;
+    }
+    .header .right ul li{
+        padding-top: 10px;
+        margin-right: 0;
+    }
+    .header .left img{
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 1083px) {
+    .header, .main{
+        flex-direction: column;
+    }
+    .header .right ul{
+        text-align: center;
+    }
+    .header .right ul li{
+        padding-top: 10px;
+        margin-right: 0;
+    }
+    .header .left img{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1046px){
+    .wrapper .border{
+        width: 400px;
+    }
+}
+
+@media (max-width: 1036px) {
+    #album{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #details{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+   #buy{
+       align-self: center;
+   }
+}
+
+@media (max-width: 1012px){
+    .search form label #input{
+        display: none;
+    }
+    #contact{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #contact .contactForm{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #box{
+        flex-direction: column;
+        align-items: center;
+    }
+    .fillOut label{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fillOut label #submit{
+       margin-left: 0;
+   }
+}
+
+@media (max-width: 1005px) {
+    .main .first{
+        height: 100%;
+    }
+}
+
+@media (max-width: 957px) {
+    .header, .main{
+        flex-direction: column;
+    }
+    .header .right ul{
+        padding-left: 0;
+    }
+    .header .right ul li{
+        margin-top: 10px;
+    }
+    .header .left img{
+        margin-bottom: 0;
+    }
+    .main .first{
+        height: 150px;
+    }
+
+}
+
+@media (max-width: 917px) {
+    .main .first{
+        height: 200px;
+    }
+    .header .right ul .search form label input{
+        width: 200px;
+    }
+}
+
+@media (max-width: 909px) {
+    .search{
+        display: flex;
+        justify-content: center;
+    }
+    #artists{
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 905px) {
+    .header, .main{
+        flex-direction: column;
+    }
+    .header .right ul{
+        padding-left: 0;
+    }
+    .header .right ul li{
+        margin-top: 10px;
+    }
+    .header .left img{
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 899px) {
+    #less, #more{
+        text-align: center;
+    }
+    .searchList{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .searchList #albumsContainer{
+        padding: 20px 0;
+    }
+    #genreContainer{
+        padding: 0;
+    }
+}
+
+@media (max-width: 860px) {
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    hr{
+        display: none;
+    }
+    .top{
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 847px){
+    .wrapper .border{
+        width: 300px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header:not(.nav-toggle){
+        /*height: 100px;*/
+        align-items: center;
+    }
+    .header .left{
+        display: none;
+    }
+    .header .right{
+        display: none;
+        width: 100%;
+    }
+    .header .right ul .albums .sub-menu{
+        left: 50%;
+    }
+
+    .header .right ul li{
+        display: block;
+        width: 100%;
+        border: 0;
+    }
+    .header .nav-toggle{
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+
+    .fa-times:before{
+        display: none;
+    }
+    #menu.nav-active{
+        display: block;
+        transition: 2s ease;
+    }
+    .nav-auto{
+        display: none;
+    }
+    .header .right ul .albums:hover .sub-menu{
+        display: none;
+    }
+    .fa-caret-down:before{
+        display: none;
+    }
+
+    #login{
+        position: relative;
+        background-image: none;
+    }
+
+    #popup{
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+    }
+    #popup .password{
+        display: inline;
+    }
+    #createAccount{
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+    }
+    #createAccount .account{
+        margin-left: 0;
+    }
+    #popup.show{
+        top: 65%;
+    }
+    #createAccount.info{
+        flex-wrap: nowrap;
+    }
+    #createAccount label .accept{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #allGenres{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #artists{
+        align-items: center;
+    }
+    #artistLinks{
+        margin-top: 0;
+    }
+   #details{
+       text-align: center;
+   }
+   #productInfo #productContainer{
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
+       margin: 20px 0;
+   }
+   #artist{
+       flex-direction: column;
+       align-items: center;
+   }
+   #artist #title{
+       text-align: center;
+       padding: 20px 0;
+   }
+   #contact .contactForm{
+       box-shadow: none;
+   }
+}
+
+@media (max-width: 797px) {
+    .header .right ul li{
+        margin-right: 10px;
+        padding: 5px 10px 5px 10px;
+    }
+}
+
+@media (max-width: 740px) {
+    #news{
+        width: 100%;
+    }
+    #someAlbums{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+ #recently, #recommended, #topAlbums, #topSingles{
+     display: flex;
+     justify-content: center;
+     padding: 20px 0;
+     border: none;
+     text-align: center;
+ }
+ #moreOptions{
+     flex-direction: column;
+     align-items: center;
+ }
+ #topSinglesContainer{
+     align-content: center;
+ }
+
+}
+
+@media (max-width: 732px) {
+    .header .right ul li{
+        margin-right: 10px;
+        padding: 5px 10px 5px 10px;
+    }
+}
+
+@media (max-width: 721px) {
+
+    .main .first{
+        height: 200px;
+    }
+}
+
+@media (max-width: 646px){
+    .wrapper .border{
+        width: 250px;
+    }
+    .productDetails td:first-child{
+        display: none;
+    }
+    #head th:first-child{
+        display: none;
+    }
+    #productContainer .productDetails td{
+       border-radius: 0;
+    }
+    .productDetails td:last-child{
+        display: none;
+    }
+    #head th:last-child{
+        display: none;
+    }
+    #num{
+        display: none;
+    }
+    #head .quantity{
+        display: none;
+    }
+   .deleteItem{
+       display: none;
+   }
+  #productInfo #deleteAll{
+       display: flex;
+       justify-content: center;
+   }
+  #shoppingCart #sc, #shoppingCart #continue{
+      align-self: center;
+  }
+
+}
+
+@media (max-width: 640px) {
+   #createAccount .info{
+       display: flex;
+       flex-direction: column;;
+   }
+}
+
+@media (max-width: 574px) {
+    #cardDetails{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 570px) {
+    #album img{
+        width: 100%;
+        height: 100%;
+    }
+    #artist .cover{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@media (max-width: 636px) {
+    #genreContainer{
+        flex-direction: column;
+    }
+    .icons{
+        padding: 20px 0;
+    }
+    #aside{
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    #trackName{
+        padding-left: 10px;
+    }
+    #thumbs{
+        padding-right: 0;
+    }
+    #news{
+        padding: 50px 10px;
+    }
+    #songDetails{
+        border: none;
+    }
+    #topSinglesContainer{
+        border: 2px solid #f1f1f1;
+    }
+}
+
+@media (max-width: 555px) {
+    .artistText{
+        background-color: white;
+        padding: 0;
+    }
+    #text{
+        background-color: white;
+        width: 100%;
+    }
+}
+
+@media (max-width: 546px){
+    .wrapper .border{
+        width: 180px;
+    }
+}
+
+@media (max-width: 521px) {
+    .main .first{
+        height: 100px;
+    }
+}
+
+@media (max-width: 460px) {
+    #trackDetails{
+        align-items: center;
+    }
+    #thumbs{
+        align-self: flex-end;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 446px){
+    .wrapper{
+        display: none;
+    }
+    .contactForm label input{
+        width: 300px;
+    }
+    .contactForm label textarea{
+        width: 300px;
+    }
+}
+
+@media (max-width: 430px) {
+    .popupItem label input{
+        width: 100px;
+    }
+    #popup #top{
+        width: 300px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #popup label input{
+        width: 300px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #popup .google, #popup .twitter, #popup .fb{
+        width: 300px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media (max-width: 410px) {
+    #map iframe{
+        width: 300px;
+    }
+}
+
+@media (max-width: 404px){
+  .emailAddress{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .emailAddress button{
+      width: 300px;
+      margin-top: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+    #artists .text{
+        text-align: center;
+    }
+    #shoppingCart{
+        padding: 0;
+    }
+    .contactInfo, .fillOut{
+        padding: 20px;
+    }
+    #productInfo #cardDetails{
+        border: none;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 310px) {
+    #map iframe{
+        width: 270px;
+    }
+}
+
+@media (max-width: 300px) {
+    .emailAddress label input{
+        width: 280px;
+    }
+    .emailAddress button{
+        width: 280px;
+    }
+    .fillOut label input{
+        width: 280px;
+    }
+    .fillOut label textarea{
+        width: 280px;
+    }
+    #popup label input{
+        width: 280px;
+    }
+    #popup #top{
+        width: 280px;
+    }
+    #popup .google, #popup .fb, #popup .twitter{
+        width: 280px;
+    }
+}

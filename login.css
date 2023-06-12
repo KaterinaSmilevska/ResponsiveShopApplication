@@ -1,0 +1,284 @@
+#login{
+    background: radial-gradient(#f1f1f1, #f9e1cf);
+    background-size: cover;
+    height: 754px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.login-btn{
+    background-color: #161030;
+    padding: 10px 100px;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.login-btn:hover{
+    box-shadow: 0 -5px 0 #161030 inset;
+}
+
+#popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    padding: 10px;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#popup a{
+    background-color: #161030;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 0 #161030 inset;
+    border-radius: 5px;
+}
+
+#popup.show{
+    top: 65%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.login-btn.show{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#popup p{
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+#popup .account{
+    font-size: 10px;
+    text-align: center;
+}
+
+#popup .account #acc{
+    display: inline;
+    font-size: 10px;
+    border: 0;
+    color: #161030;
+    box-shadow: none;
+    background-color: white;
+    padding: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#popup label{
+    display: block;
+}
+
+#popup label input{
+    width: 400px;
+    padding: 10px;
+    margin: 10px 0 10px 10px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+}
+
+#popup label input:focus{
+    border: 2px solid black;
+    outline: none !important;
+}
+
+#popup input{
+    margin-left: 10px;
+}
+
+#popup #top{
+    background-color: #161030;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 400px;
+    margin: 20px 0 20px 10px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#popup .or{
+    font-size: 12px;
+    text-align: center;
+}
+
+#popup .google{
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 10px 5px;
+    border: 2px solid #cccccc;
+    cursor: pointer;
+    width: 400px;
+    letter-spacing: 1px;
+}
+
+.fa-google{
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+#popup .fb{
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 10px 5px;
+    cursor: pointer;
+    width: 400px;
+    background-color: #3b5998;
+    color: white;
+    letter-spacing: 1px;
+}
+
+#popup .twitter{
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 10px 5px;
+    border: 2px solid #cccccc;
+    cursor: pointer;
+    width: 400px;
+    background-color: white;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.fa-google:before{
+    padding: 5px 10px;
+    font-size: 24px;
+}
+
+.fa-facebook-official:before{
+    color: white;
+    padding: 5px 10px;
+    font-size: 24px;
+}
+
+.fa-twitter:before{
+    color: #1da1f2;
+    padding: 5px 10px;
+    font-size: 24px;
+}
+
+.sm-icons .fa-twitter:before{
+    color: white;
+}
+
+#createAccount{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    padding: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#createAccount.display{
+    top: 65%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#popup.display{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#login.show{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#createAccount p{
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+#createAccount .info{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 50% 50%;
+    justify-content: space-evenly;
+}
+#createAccount .info label p{
+    font-size: 12px;
+    text-align: left;
+    margin: 0 0 0 10px;
+    font-weight: bold;
+}
+
+#createAccount .info label input{
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0 10px 10px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+}
+
+#createAccount .info .accept{
+    margin: 10px;
+}
+
+#createAccount .info .accept p{
+    display: inline;
+    margin: 0;
+    font-weight: normal;
+}
+#createAccount .info .accept input{
+    width: 20px;
+}
+
+#createAccount #signUp{
+    background-color: #161030;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding: 10px 0;
+    width: 200px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    align-self: center;
+}
+
+#createAccount .account{
+    font-size: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+#createAccount .account .close{
+    padding: 0;
+    text-decoration: underline;
+    color: #161030;
+    letter-spacing: 1px;
+    font-size: 10px;
+}

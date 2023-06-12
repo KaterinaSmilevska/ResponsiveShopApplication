@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="mediaQuery.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="myscript.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="left">
+        <img src="images/logo2.png" alt="logo">
+    </div>
+    <div class="nav-toggle" onclick="hamburgerMenu()">
+        <input type="checkbox" id="toggle"><i class="fa fa-bars"></i>
+    </div>
+    <div class="nav-toggle" onclick="hamburgerMenu()">
+        <input type="checkbox" id="close"><i class="fa fa-times"></i>
+    </div>
+    <div class="right active" id="menu">
+        <ul>
+            <li><a href="home.html"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="artist.html">Artists</a></li>
+            <li class="albums"><a href="genres.html">Albums</a></li>
+            <li class="current"><a href="contact.html"><i class="fa fa-phone"></i>Contact</a></li>
+            <li class="login"><a href="login.html">Login</a></li>
+            <li><a href="shopping.html"><i class="fa fa-shopping-cart"></i></a></li>
+            <li class="search">
+                <form>
+                    <label><i class="fa fa-search"></i>
+                        <input id="input" name="search" autocomplete="off" placeholder="Search...">
+                    </label>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div id="contact">
+        <div class="contactForm">
+                <div class="fillOut">
+                    <div>Get in touch</div>
+                    <label>
+                        <input type="text" name="username" placeholder="Username" autocomplete="off">
+                        <input type="email" name="email" placeholder="Email" autocomplete="off">
+                        <input type="text" name="subject" placeholder="Subject" autocomplete="off">
+                        <textarea placeholder="Message" autocomplete="off"></textarea>
+                        <button id="submit" type="submit" onclick="location.reload()">Submit</button>
+                    </label>
+                </div>
+                <div class="contactInfo">
+                    <div>Contact information</div>
+                    <div class="location">
+                        <i class="fa fa-map-marker" onclick="window.open('https://www.google.com/maps/place/Bitola/@41.0257978,21.293566,13z/data=!3m1!4b1!4m5!3m4!1s0x13572451365fb6fd:0xfa67bbbf65bec948!8m2!3d41.0296773!4d21.3292164', '_blank')"></i>
+                        <p>Bitola, Macedonia</p>
+                    </div>
+                    <div class="email">
+                        <i class="fa fa-envelope"></i>
+                        <p onclick="window.open('https://myaccount.google.com/intro/signing-in-to-google', '_blank')">smilevskakaterina5@gmail.com</p>
+                    </div>
+                    <div class="phone">
+                        <i class="fa fa-phone"></i>
+                        <p>(+389) 123 / 456 - 789</p>
+                    </div>
+                    <div class="follow">
+                        <p>Follow us</p>
+                        <div class="socialMedia">
+                            <i onclick="window.open('https://www.facebook.com/', '_blank')" class="fa fa-facebook-square" ></i>
+                            <i onclick="window.open('https://www.instagram.com/accounts/login/', '_blank')" class="fa fa-instagram"></i>
+                            <i onclick="window.open('https://twitter.com/login?lang=en', '_blank')" class="fa fa-twitter"></i>
+                            <i onclick="window.open('https://www.youtube.com/', '_blank')" class="fa fa-youtube-play"></i>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div id="mail">
+            <div class="emailAddress">
+                <p>Enter your email address to search for your favourite albums.</p>
+                <label>
+                    <input type="email" name="email" autocomplete="off" placeholder="E-mail" required="required">
+                </label>
+                <button type="submit" name="submit">SUBMIT</button>
+            </div>
+            <div id="map">
+                <iframe src="https://maps.google.com/maps?q=bitola&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div>
+
+        <div class="links">
+            <div class="link-logo"><i class="fa fa-link"></i></div>
+            <!--            <div class="explore">Explore</div>-->
+            <div class="websiteLinks">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="artist.html" target="_blank">ARTISTS</a></li>
+                    <li><a href="genres.html" target="_blank">GENRES</a></li>
+                    <li><a href="shopping.html" target="_blank">SHOPPING CART</a></li>
+                    <li><a href="contact.html" target="_blank">CONTACT</a></li>
+                    <li><a href="login.html" target="_blank">LOGIN</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social">
+            <div class="media">SOCIAL MEDIA</div>
+            <div class="sm-icons">
+                <i onclick="window.open('https://www.facebook.com/', '_blank')" class="fa fa-facebook-square"></i>
+                <i onclick="window.open('https://www.instagram.com/accounts/login/', '_blank')" class="fa fa-instagram"></i>
+                <i onclick="window.open('https://twitter.com/login?lang=en', '_blank')" class="fa fa-twitter"></i>
+                <i onclick="window.open('https://github.com/', '_blank')" class="fa fa-github"></i>
+                <i onclick="window.open('https://www.youtube.com/', '_blank')" class="fa fa-youtube-play"></i>
+            </div>
+            <div class="terms">
+                <div class="legal">LEGAL</div>
+                <div>Terms</div>
+                <div>Policy</div>
+            </div>
+        </div>
+        <div class="top">
+            <i class="fa fa-angle-up" onclick="topFunction()"></i>
+        </div>
+    </div>
+
+</body>
+</html>

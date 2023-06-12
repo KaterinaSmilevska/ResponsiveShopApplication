@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Genres</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="objects.css">
+    <link rel="stylesheet" href="mediaQuery.css">
+    <link rel="stylesheet" href="artist.css">
+    <link rel="stylesheet" href="genres.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="myscript.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="jsviews.js"></script>
+    <script src="albums.js"></script>
+    <script src="genres.js"></script>
+    <script src="shopping.js"></script>
+    <script id="genreTemplate" type="text/x-jsrender">
+             <div class="icons" id="genre_{{:genreCode}}" onclick="DisplayByGenre('{{:genreCode}}');">
+                <div class="genreIcon"><i id="icon" class="{{:genreIcon}}"></i></div>
+                <div class="genreName" id="genreName">{^{:genreName}}</div>
+             </div>
+    </script>
+    <script id="albumsTemplate" type="text/x-jsrender">
+           <div id="newAlbums" class="displayAl">
+                <div class="album" onclick="window.open('showAlbum.html?artistCode={{:artistCode}}&albumCode={{:albumCode}}', '_blank')">
+                    <img data-link="src{:cover}, alt{:albumName}">
+                    <div id="name">{^{:albumName}}</div>
+                    <div id="tracks">{^{:numTracks}} songs</div>
+                    <div class="buyAlbum">
+                      <div id="price">${^{:price}}</div>
+                      <div id="addAlbum">Add to cart</div>
+                    </div>
+                </div>
+           </div>
+    </script>
+
+</head>
+<body onload="loadAlbums(); loadGenres(); activeGenre()">
+<div class="header">
+    <div class="left">
+        <img src="images/logo2.png" alt="logo">
+    </div>
+    <div class="nav-toggle" onclick="hamburgerMenu()">
+        <input type="checkbox" id="toggle"><i class="fa fa-bars"></i>
+    </div>
+    <div class="nav-toggle" onclick="hamburgerMenu()">
+        <input type="checkbox" id="close"><i class="fa fa-times"></i>
+    </div>
+    <div class="right active" id="menu">
+        <ul>
+            <li><a href="home.html"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="artist.html">Artists</a></li>
+            <li class="albums, current"><a href="genres.html">Albums</a></li>
+            <li><a href="contact.html"><i class="fa fa-phone"></i>Contact</a></li>
+            <li class="login"><a href="login.html">Login</a></li>
+            <li><a href="shopping.html"><i class="fa fa-shopping-cart"></i></a></li>
+            <li class="search">
+                <form>
+                    <label><i class="fa fa-search"></i>
+                        <input onkeyup="SearchByAlbumName()" id="input" name="search" autocomplete="off" placeholder="Search albums...">
+                    </label>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <div id="genreContainer">
+
+    </div>
+    <div class="searchList">
+        <div id="aside">
+            <div id="searchBy">
+                <div id="albumsAndGenres">Genres
+                    <form>
+                        <label>
+                            <input type="checkbox" name="all">All
+                        </label>
+                        <label>
+                            <input type="checkbox" name="heavymetal">Heavy metal
+                        </label>
+                        <label>
+                            <input type="checkbox" name="hiphop">Hip-hop
+                        </label>
+                        <label>
+                            <input type="checkbox" name="hiphop">Pop
+                        </label>
+                        <label>
+                            <input type="checkbox" name="hiphop">Rock
+                        </label>
+                    </form>
+                </div>
+                <div id="releaseDate">Release date
+                    <form>
+                        <label>
+                            <input id="year" type="number" name="date" min="1969" max="2021" placeholder="2021" autocomplete="off">
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="noAlbum" style="display: none">No albums match your search.</div>
+        <div id="albumsContainer">
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div id="mail">
+            <div class="emailAddress">
+                <p>Enter your email address to search for your favourite albums.</p>
+                <label>
+                    <input type="email" name="email" autocomplete="off" placeholder="E-mail" required="required">
+                </label>
+                <button type="submit" name="submit">SUBMIT</button>
+            </div>
+            <div id="map">
+                <iframe src="https://maps.google.com/maps?q=bitola&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div>
+
+        <div class="links">
+            <div class="link-logo"><i class="fa fa-link"></i></div>
+            <div class="websiteLinks">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="artist.html" target="_blank">ARTISTS</a></li>
+                    <li><a href="genres.html" target="_blank">GENRES</a></li>
+                    <li><a href="shopping.html" target="_blank">SHOPPING CART</a></li>
+                    <li><a href="contact.html" target="_blank">CONTACT</a></li>
+                    <li><a href="login.html" target="_blank">LOGIN</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social">
+            <div class="media">SOCIAL MEDIA</div>
+            <div class="sm-icons">
+                <i onclick="window.open('https://www.facebook.com/', '_blank')" class="fa fa-facebook-square"></i>
+                <i onclick="window.open('https://www.instagram.com/accounts/login/', '_blank')" class="fa fa-instagram"></i>
+                <i onclick="window.open('https://twitter.com/login?lang=en', '_blank')" class="fa fa-twitter"></i>
+                <i onclick="window.open('https://github.com/', '_blank')" class="fa fa-github"></i>
+                <i onclick="window.open('https://www.youtube.com/', '_blank')" class="fa fa-youtube-play"></i>
+            </div>
+            <div class="terms">
+                <div class="legal">LEGAL</div>
+                <div>Terms</div>
+                <div>Policy</div>
+            </div>
+        </div>
+        <div class="top">
+            <i class="fa fa-angle-up" onclick="topFunction()"></i>
+        </div>
+    </div>
+</body>
+</html>
